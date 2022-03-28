@@ -2,8 +2,14 @@
 
 namespace ExelReader
 {
-    class Program
+    public class Program
     {
+        public static Dictionary<long, long> AbsoluteFrequencies { get; set; }
+        public static Dictionary<long, decimal> RelativeFrequencies { get; set; }
+        public static Decimal Median { get; set; }
+        public static List<double> Mode { get; set; }
+        public static double Average { get; set; }
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -36,63 +42,14 @@ namespace ExelReader
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
 
-            /* If you want to test any functionality
-             * 
-            List<long> numbers = new List<long>() { 55, 35, 65, 65, 80, 60, 80, 80, 70, 70, 70, 90, 90, 90 };
-            numbers.Sort();
+            List<int> updatedWikisIds = reader.updatedWikisPerId.Select(t => t.Value).ToList();
+            AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(updatedWikisIds);
+            RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(updatedWikisIds);
 
-            // Честоти
-            FrequencyCalculator frequencyCalculator = new FrequencyCalculator();
-            Dictionary<long, long> absoluteFrequencies =  frequencyCalculator.GetAbsoluteFrequencies(numbers);
-            Dictionary<long, decimal> relativeFrequencies =  frequencyCalculator.GetRelativeFrequencies(numbers);
-
-            Console.WriteLine("Абсолютна честота: ");
-            foreach (var item in absoluteFrequencies)
-            {
-                Console.WriteLine("Число: " + item.Key + ", Честота: "  + item.Value);
-            }
-
-            Console.WriteLine("Относителна честота: ");
-            foreach (var item in relativeFrequencies)
-            {
-                Console.WriteLine("Число: " + item.Key + ", Честота: " + item.Value + "%");
-            }
-
-            // Мерки на централна тенденция
-            Decimal median = Statistics.GetMedian(numbers);
-            System.Console.WriteLine("Медиана: " + median);
-            List<double> result = Statistics.GetMode(numbers);
-
-            if (result.Count == 0)
-            {
-                Console.WriteLine("Няма мода.");
-            }
-            else
-            {
-                Console.WriteLine("Мода: {0}", String.Join(", ", result));
-            }
-
-            double average = Statistics.GetAverage(numbers);
-            System.Console.WriteLine("Средна стойност:" + average);
-
-            // Мерки на разсейване
-            DistractionCalculator distractionCalculator = new DistractionCalculator();
-            long swing = distractionCalculator.GetSwing(numbers);
-            System.Console.WriteLine("Размах: " + swing);
-
-            Double dispersion = distractionCalculator.GetDispersion(numbers);
-            System.Console.WriteLine("Дисперсия: " + dispersion);
-
-            Decimal sd = distractionCalculator.GetStandardDeviation(numbers);
-            System.Console.WriteLine("Стандартно отклонение: " + Decimal.Round(sd, 2, MidpointRounding.AwayFromZero));
-
-            // Корелационен анализ
-            List<long> values1 = new List<long>() { 11, 13, 18, 12, 16, 14 };
-            List<long> values2 = new List<long>() { 67, 73, 78, 71, 73, 70 };
-            Decimal correlationCoeff = (Decimal)CorrelationCalculator.ComputeCoeff(values1, values2);
-
-            System.Console.WriteLine("Корелационен анализ: " + Decimal.Round(correlationCoeff, 2, MidpointRounding.AwayFromZero));
-             */
+            Median = StatisticsCalculator.GetMedian(updatedWikisIds);
+            Average = StatisticsCalculator.GetAverage(updatedWikisIds);
+            Mode = StatisticsCalculator.GetMode(updatedWikisIds);
+            Console.WriteLine();
         }
     }
 }

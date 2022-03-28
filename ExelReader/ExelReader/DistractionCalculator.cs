@@ -3,18 +3,17 @@ namespace ExelReader
 {
     public class DistractionCalculator
     {
-        public long GetSwing(List<long> numbers)
+        public long GetSwing(List<int> numbers)
         {
             numbers.Sort();
             return numbers[numbers.Count - 1] - numbers[0];
         }
 
-        public Decimal GetStandardDeviation(List<long> numbers)
+        public Decimal GetStandardDeviation(List<int> numbers)
         {
             return (Decimal)Math.Sqrt(GetDispersion(numbers));
         }
-
-        public Double GetDispersion(List<long> numbers)
+        public Double GetDispersion(List<int> numbers)
         {
             double average = StatisticsCalculator.GetAverage(numbers);
             double sumOfSquaresOfDifferences = 0;
