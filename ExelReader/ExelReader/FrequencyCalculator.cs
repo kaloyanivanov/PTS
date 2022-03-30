@@ -2,11 +2,9 @@
 {
     public class FrequencyCalculator
     {
-        public static Dictionary<long, long> GetAbsoluteFrequencies(List<int> wikis)
+        public static Dictionary<int, int> GetAbsoluteFrequencies(List<int> wikis)
         {
-            //key - user id 
-            //value - wiki id
-            Dictionary<long, long> frequencies = new Dictionary<long, long>();
+            Dictionary<int, int> frequencies = new Dictionary<int, int>();
             wikis.ForEach(wiki => {
                 if (!frequencies.ContainsKey(wiki))
                 {
@@ -18,11 +16,10 @@
             return frequencies;
         }
 
-        public static Dictionary<long, decimal> GetRelativeFrequencies(List<int> wikis)
+        public static Dictionary<int, decimal> GetRelativeFrequencies(List<int> wikis)
         {
-
-            Dictionary<long, long> absoluteFrequencies = GetAbsoluteFrequencies(wikis);
-            Dictionary<long, decimal> relativeFrequencies = new Dictionary<long, decimal>();
+            Dictionary<int, int> absoluteFrequencies = GetAbsoluteFrequencies(wikis);
+            Dictionary<int, decimal> relativeFrequencies = new Dictionary<int, decimal>();
             foreach (var item in absoluteFrequencies)
             {
                 relativeFrequencies.Add(item.Key, GetRelativeFrequency(item.Value, wikis.Count));

@@ -4,8 +4,8 @@ namespace ExelReader
 {
     public class Program
     {
-        public static Dictionary<long, long> AbsoluteFrequencies { get; set; }
-        public static Dictionary<long, decimal> RelativeFrequencies { get; set; }
+        public static Dictionary<int, int> AbsoluteFrequencies { get; set; }
+        public static Dictionary<int, decimal> RelativeFrequencies { get; set; }
         public static Decimal Median { get; set; }
         public static List<double> Mode { get; set; }
         public static double Average { get; set; }
@@ -42,14 +42,13 @@ namespace ExelReader
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
 
-            List<int> updatedWikisIds = reader.updatedWikisPerId.Select(t => t.Value).ToList();
-            AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(updatedWikisIds);
-            RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(updatedWikisIds);
+            List<int> updatedWikisCount = reader.updatedWikisPerId.Select(t => t.Value).ToList();
+            AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(updatedWikisCount);
+            RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(updatedWikisCount);
 
-            Median = StatisticsCalculator.GetMedian(updatedWikisIds);
-            Average = StatisticsCalculator.GetAverage(updatedWikisIds);
-            Mode = StatisticsCalculator.GetMode(updatedWikisIds);
-            Console.WriteLine();
+            Median = StatisticsCalculator.GetMedian(updatedWikisCount);
+            Average = StatisticsCalculator.GetAverage(updatedWikisCount);
+            Mode = StatisticsCalculator.GetMode(updatedWikisCount);
         }
     }
 }
