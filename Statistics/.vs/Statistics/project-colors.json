@@ -10,7 +10,22 @@
       "ProjectGuid": "63001b1c-cc62-4c55-9d8d-4a87c8d8f020",
       "DisplayName": "ExelReader",
       "ColorIndex": 1
+    },
+    "12230d01-d0e7-42a9-9d42-0e33821732a8": {
+      "ProjectGuid": "12230d01-d0e7-42a9-9d42-0e33821732a8",
+      "DisplayName": "ExelReader",
+      "ColorIndex": 2
+    },
+    "404b7668-39b9-4497-b9c4-09fff94a34cc": {
+      "ProjectGuid": "404b7668-39b9-4497-b9c4-09fff94a34cc",
+      "DisplayName": "ExelReaderTests",
+      "ColorIndex": 3
+    },
+    "8f3ae6fe-85b3-477f-8384-fec70efb7e84": {
+      "ProjectGuid": "8f3ae6fe-85b3-477f-8384-fec70efb7e84",
+      "DisplayName": "DistractionTests",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 5
 }
