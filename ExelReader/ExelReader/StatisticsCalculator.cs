@@ -2,14 +2,14 @@
 {
     public class StatisticsCalculator
     {
-        public static Decimal GetMedian(List<int> numbers)
+        public static Decimal GetMedian(List<long> numbers)
         {
             int count = numbers.Count;
             decimal median = 0;
             if (count % 2 == 0)
             {
-                int a = numbers[count / 2 - 1];
-                int b = numbers[count / 2];
+                long a = numbers[count / 2 - 1];
+                long b = numbers[count / 2];
                 median = (a + b) / 2m;
             }
             else
@@ -19,7 +19,7 @@
             return median;
         }
 
-        public static double GetAverage(List<int> numbers)
+        public static double GetAverage(List<long> numbers)
         {
             double average = 0;
             for (int i = 0; i < numbers.Count; i++)
@@ -41,7 +41,7 @@
             return average;
         }
 
-        public static List<double> GetMode(List<int> numbers)
+        public static List<double> GetMode(List<long> numbers)
         {
             long mode = 0;
             long max = 0;
@@ -91,7 +91,7 @@
             return result;
         }
 
-        private static bool AreNeighbours(List<double> result, List<int> numbers)
+        private static bool AreNeighbours(List<double> result, List<long> numbers)
         {
             // what if we have 4 different numbers 
             // get the index of the first
@@ -127,7 +127,7 @@
             return count == 1;
         }
 
-        private static int GetFirstIndexOfNum(double num, List<int> numbers)
+        private static int GetFirstIndexOfNum(double num, List<long> numbers)
         {
             for (int i = 0; i < numbers.Count; i++)
             {

@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "56a25a6b-2ee9-441f-92c2-b85568610432": {
+      "ProjectGuid": "56a25a6b-2ee9-441f-92c2-b85568610432",
+      "DisplayName": "ExelReader",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "48654612-5fdf-400e-a6bd-8a42c320d455": {
+      "ProjectGuid": "48654612-5fdf-400e-a6bd-8a42c320d455",
+      "DisplayName": "DistractionTests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
