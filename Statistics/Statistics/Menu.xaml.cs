@@ -4,23 +4,65 @@ namespace Statistics;
 
 public partial class Menu : ContentPage
 {
-	public decimal Result { get; set; }
 	public Menu()
 	{
 		this.BindingContext = this;
-		ExelReader.ExelReader reader = new ExelReader.ExelReader();
-		//reader.ReadLogs("C:\\Users\\dimitar\\Documents\\programming\\pts\\Logs_Course A_StudentsActivities.xlsx");
-		//            reader.GetUserIdCount(reader.updatedWikis, reader.updatedWikisPerId);
-		//            reader.GetUserIdCount(reader.uploadedFiles, reader.uploadedFilesPerId);
-		//            reader.ReadScores("C:\\Users\\dimitar\\Documents\\programming\\pts\\Course A_StudentsResults_Year 1.xlsx");
-		//             reader.ReadScores("C:\\Users\\dimitar\\Documents\\programming\\pts\\Course A_StudentsResults_Year 2.xlsx");
-
 		InitializeComponent();
 	}
 
 	private void RelativeFrequencyButtonClicked(object sender, EventArgs e)
 	{
 		//FrequencyCalculator.GetRelativeFrequencies();
+	}
+
+	private void MedianButtonClicked(object sender, EventArgs e)
+    {
+		if (IsNotCalculated(StatisticsViewModel.Median))
+        {
+			StatisticsViewModel.Median = StatisticsCalculator.GetMedian(StatisticsViewModel.WikisCount);
+		}
+		ResultLabel.Text = StatisticsViewModel.Median.ToString();
+		ResultLabel.IsVisible = true;
+	}
+
+	private void AverageButtonClicked(object sender, EventArgs e)
+	{
+        if (IsNotCalculated(StatisticsViewModel.Average))
+        {
+			StatisticsViewModel.Average = StatisticsCalculator.GetAverage(StatisticsViewModel.WikisCount);
+		}
+		ResultLabel.Text = StatisticsViewModel.Average.ToString();
+		ResultLabel.IsVisible = true;
+	}
+
+	private void DispersionButtonClicked(object sender, EventArgs e)
+	{
+		if (IsNotCalculated(StatisticsViewModel.Dispersion))
+		{
+			StatisticsViewModel.Dispersion = DistractionCalculator.GetDispersion(StatisticsViewModel.WikisCount);
+		}
+		ResultLabel.Text = StatisticsViewModel.Dispersion.ToString();
+		ResultLabel.IsVisible = true;
+	}
+
+	private void StandardDeviationButtonClicked(object sender, EventArgs e)
+	{
+		if (IsNotCalculated(StatisticsViewModel.StandardDeviation))
+		{
+			StatisticsViewModel.StandardDeviation = DistractionCalculator.GetStandardDeviation(StatisticsViewModel.WikisCount);
+		}
+		ResultLabel.Text = StatisticsViewModel.StandardDeviation.ToString();
+		ResultLabel.IsVisible = true;
+	}
+
+	private void SwingButtonClicked(object sender, EventArgs e)
+	{
+		if (IsNotCalculated(StatisticsViewModel.Swing))
+		{
+			StatisticsViewModel.Swing = DistractionCalculator.GetSwing(StatisticsViewModel.WikisCount);
+		}
+		ResultLabel.Text = StatisticsViewModel.Swing.ToString();
+		ResultLabel.IsVisible = true;
 	}
 
 	private void CorrelationButtonClicked(object sender, EventArgs e)
@@ -33,5 +75,20 @@ public partial class Menu : ContentPage
 	{
 		DataSummary newPage = new DataSummary();
 		(App.Current.MainPage as NavigationPage).PushAsync(newPage);
+	}
+
+	private bool IsNotCalculated(decimal value)
+	{
+		return value == -1;
+	}
+
+	private bool IsNotCalculated(double value)
+	{
+		return value == -1;
+	}
+
+	private bool IsNotCalculated(long value)
+	{
+		return value == -1;
 	}
 }

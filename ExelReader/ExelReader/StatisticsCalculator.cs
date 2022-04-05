@@ -1,8 +1,10 @@
-﻿namespace ExelReader
+﻿using System.Collections.ObjectModel;
+
+namespace ExelReader
 {
     public class StatisticsCalculator
     {
-        public static Decimal GetMedian(List<long> numbers)
+        public static Decimal GetMedian(List<int> numbers)
         {
             int count = numbers.Count;
             decimal median = 0;
@@ -19,7 +21,7 @@
             return median;
         }
 
-        public static double GetAverage(List<long> numbers)
+        public static double GetAverage(List<int> numbers)
         {
             double average = 0;
             for (int i = 0; i < numbers.Count; i++)
@@ -41,7 +43,7 @@
             return average;
         }
 
-        public static List<double> GetMode(List<long> numbers)
+        public static ObservableCollection<double> GetMode(List<int> numbers)
         {
             long mode = 0;
             long max = 0;
@@ -85,13 +87,13 @@
             if (modeIsAverage)
             {
                 double average = StatisticsCalculator.GetAverageOfDouble(result);
-                return new List<double>() { average };
+                result = new List<double>() { average };
             }
 
-            return result;
+            return new ObservableCollection<double>(result);
         }
 
-        private static bool AreNeighbours(List<double> result, List<long> numbers)
+        private static bool AreNeighbours(List<double> result, List<int> numbers)
         {
             // what if we have 4 different numbers 
             // get the index of the first
@@ -127,7 +129,7 @@
             return count == 1;
         }
 
-        private static int GetFirstIndexOfNum(double num, List<long> numbers)
+        private static int GetFirstIndexOfNum(double num, List<int> numbers)
         {
             for (int i = 0; i < numbers.Count; i++)
             {

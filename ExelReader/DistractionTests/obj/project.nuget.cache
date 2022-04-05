@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UMPc2TNb7GbJE19q+xfWWbLrLGMqyfDOcgAtWIe+q4kmRovzC6tm3/gbA9M+B1Auh0dXGy7W0+aa85IxDiNOFA==",
+  "dgSpecHash": "b5h9jg3HOnxwPO8sMrkmmNKtI576rHSUbtAaD7o4G86yeBLhmyNjW5jHxr4Udv8gr5ZqtJxnhVkDcXxOEL0rVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
+  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimitar\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\dimitar\\.nuget\\packages\\documentformat.openxml\\2.15.0\\documentformat.openxml.2.15.0.nupkg.sha512",

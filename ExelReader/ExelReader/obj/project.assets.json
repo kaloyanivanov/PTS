@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+      "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
       "projectName": "ExelReader",
-      "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+      "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
       "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\obj\\",
+      "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

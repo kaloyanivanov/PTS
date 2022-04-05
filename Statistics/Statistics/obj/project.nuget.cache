@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qXO4L2qHwfGhoA9wIyD1d2n6lTgdcJ+l6cSprACfWPKhOgq6yQOr8brPf7PTRr1G473fU2df82B0eWRPjqaDNg==",
+  "dgSpecHash": "Cg5fOC9yjbnQsgyuXxqtv6scqoUP1dUbvYnGFwK2ZBiC5I7ywwMMLwn2m/SfVzW6Mh4hujX8NzWiBeWCPhLtbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\Statistics\\Statistics\\Statistics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimitar\\.nuget\\packages\\documentformat.openxml\\2.15.0\\documentformat.openxml.2.15.0.nupkg.sha512",
     "C:\\Users\\dimitar\\.nuget\\packages\\googlegson\\2.8.8.2\\googlegson.2.8.8.2.nupkg.sha512",

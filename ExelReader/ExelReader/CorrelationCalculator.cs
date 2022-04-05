@@ -2,7 +2,7 @@
 {
     public class CorrelationCalculator
     {
-        public static double ComputeCoeff(List<long> values1, List<long> values2)
+        public static double ComputeCoeff(List<int> values1, List<int> values2)
         {
             if (values1.Count != values2.Count)
                 throw new ArgumentException("values must be the same length");

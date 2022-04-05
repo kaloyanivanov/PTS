@@ -185,10 +185,6 @@ namespace ExelReader
                 userIdCount.Add(new KeyValuePair<int, int>(line.Key, line.Count()));
                 userIdCount.Sort((x, y) => y.Value.CompareTo(x.Value));
             }
-            foreach(var pair in userIdCount)
-            {
-                Console.WriteLine(pair.Key + " " + pair.Value);
-            }
         }
     }
 }
