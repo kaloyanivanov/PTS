@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj": {}
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj": {}
   },
   "projects": {
-    "D:\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj": {
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj",
+        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj",
         "projectName": "ExelReaderTests",
-        "projectPath": "D:\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj",
-        "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
-        "outputPath": "D:\\PTS\\ExelReader\\ExelReaderTests\\obj\\",
+        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReaderTests\\ExelReaderTests.csproj",
+        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReaderTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudioSDK\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-                "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
               }
             }
           }
@@ -85,20 +85,20 @@
         }
       }
     },
-    "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
         "projectName": "ExelReader",
-        "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
-        "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
-        "outputPath": "D:\\PTS\\ExelReader\\ExelReader\\obj\\",
+        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudioSDK\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

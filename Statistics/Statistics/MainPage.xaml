@@ -5,7 +5,7 @@
              BackgroundColor="{DynamicResource SecondaryColor}">
     
     <ScrollView>
-        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
               Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
             <Label 
@@ -37,6 +37,7 @@
                 HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
                 MaxLength="50"
                 WidthRequest="400"
+                Background="#2B0B98"
                 HorizontalOptions="Center" />
 
             <Editor Grid.Row="4"
@@ -45,6 +46,7 @@
                 HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
                 MaxLength="50"
                 WidthRequest="400"
+                Background="#2B0B98"
                 HorizontalOptions="Center" />
            
             <Editor Grid.Row="5"
@@ -53,6 +55,7 @@
                 HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
                 MaxLength="50"
                 WidthRequest="400"
+                Background="#2B0B98"
                 HorizontalOptions="Center" />
 
             <Button 
@@ -62,8 +65,14 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnFileButtonClicked"
                 HorizontalOptions="Center" />
-
-
+            <Label 
+                x:Name="InvalidPathLabel"
+                Text="Невалиден път към файл"
+                IsVisible="False"
+                Grid.Row="7"
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="Red" />
         </Grid>
     </ScrollView>
 </ContentPage>

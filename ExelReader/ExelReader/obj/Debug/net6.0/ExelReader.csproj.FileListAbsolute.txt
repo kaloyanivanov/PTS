@@ -88,3 +88,15 @@ D:\PTS\ExelReader\ExelReader\obj\Debug\net6.0\refint\ExelReader.dll
 D:\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.pdb
 D:\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.genruntimeconfig.cache
 D:\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ref\ExelReader.dll
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\bin\Debug\net6.0\ExelReader.deps.json
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\bin\Debug\net6.0\ExelReader.dll
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\bin\Debug\net6.0\ExelReader.pdb
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.csproj.AssemblyReference.cache
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.AssemblyInfoInputs.cache
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.AssemblyInfo.cs
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.csproj.CoreCompileInputs.cache
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.dll
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\refint\ExelReader.dll
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ExelReader.pdb
+C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReader\obj\Debug\net6.0\ref\ExelReader.dll

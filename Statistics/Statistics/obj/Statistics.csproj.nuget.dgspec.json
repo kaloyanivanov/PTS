@@ -1,24 +1,89 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj": {}
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj": {}
   },
   "projects": {
-    "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj": {
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "projectName": "ExelReader",
+        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300-preview.22154.4\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
         "projectName": "Statistics",
-        "projectPath": "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj",
-        "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
-        "outputPath": "D:\\PTS\\Statistics\\Statistics\\obj\\",
+        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "D:\\VisualStudioSDK\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -36,19 +101,35 @@
         "frameworks": {
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              }
+            }
           },
           "net6.0-ios15.2": {
             "targetAlias": "net6.0-ios",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              }
+            }
           },
           "net6.0-maccatalyst15.2": {
             "targetAlias": "net6.0-maccatalyst",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              }
+            }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -70,6 +151,10 @@
               "target": "Package",
               "version": "[6.0.200-preview.14.5099, )",
               "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
             }
           },
           "imports": [
@@ -132,6 +217,10 @@
               "version": "[6.0.200-preview.14.5099, )",
               "autoReferenced": true
             },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )"
@@ -178,6 +267,10 @@
               "target": "Package",
               "version": "[6.0.200-preview.14.5099, )",
               "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
@@ -230,6 +323,10 @@
               "target": "Package",
               "version": "[6.0.200-preview.14.5099, )",
               "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
             },
             "Microsoft.WindowsAppSDK": {
               "target": "Package",

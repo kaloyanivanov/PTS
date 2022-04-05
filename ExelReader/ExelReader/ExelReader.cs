@@ -3,7 +3,7 @@ using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace ExelReader
 {
-    internal class ExelReader
+    public class ExelReader
     {
         private List<SheetData> sheets { get; set; }
         private SharedStringTable table;

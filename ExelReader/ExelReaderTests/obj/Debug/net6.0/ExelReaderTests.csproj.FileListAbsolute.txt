@@ -1,8 +1,5 @@
 C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\CoverletSourceRootsMapping
 C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testhost.dll
-C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.deps.json
-C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.runtimeconfig.json
-C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.exe
 C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testhost.exe
 C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\dimitar\Documents\programming\git\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\NUnit3.TestAdapter.dll

@@ -3,8 +3,38 @@ build_property.TargetFramework = net6.0-maccatalyst
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Statistics
-build_property.ProjectDir = D:\PTS\Statistics\Statistics\
+build_property.ProjectDir = C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\
+
+[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/DataSummary.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.DataSummary.xaml
+build_metadata.AdditionalFiles.TargetPath = DataSummary.xaml
+build_metadata.AdditionalFiles.RelativePath = DataSummary.xaml
+
+[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/LinearCorrelation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.LinearCorrelation.xaml
+build_metadata.AdditionalFiles.TargetPath = LinearCorrelation.xaml
+build_metadata.AdditionalFiles.RelativePath = LinearCorrelation.xaml
+
+[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/Menu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.Menu.xaml
+build_metadata.AdditionalFiles.TargetPath = Menu.xaml
+build_metadata.AdditionalFiles.RelativePath = Menu.xaml

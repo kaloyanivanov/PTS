@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ExelReader",
+    "\\ExelReader\\DistractionTests",
+    "\\Statistics",
+    "\\Statistics\\Statistics",
+    "\\Statistics\\Statistics\\bin",
+    "\\Statistics\\Statistics\\Resources"
   ],
+  "SelectedNode": "\\Statistics\\Statistics.sln",
   "PreviewInSolutionExplorer": false
 }

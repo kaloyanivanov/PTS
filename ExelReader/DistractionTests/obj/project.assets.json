@@ -3944,23 +3944,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kaloian\\.nuget\\packages\\": {},
-    "D:\\VisualStudioSDK\\NuGetPackages": {}
+    "C:\\Users\\dimitar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
+      "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
       "projectName": "DistractionTests",
-      "projectPath": "D:\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
-      "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
-      "outputPath": "D:\\PTS\\ExelReader\\DistractionTests\\obj\\",
+      "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\DistractionTests\\DistractionTests.csproj",
+      "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\DistractionTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\VisualStudioSDK\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3976,8 +3976,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-              "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+            "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
             }
           }
         }
