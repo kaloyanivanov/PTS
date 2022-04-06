@@ -64,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="AbsoluteFrequency.xaml.cs">
+	    <DependentUpon>AbsoluteFrequency.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Menu.xaml.cs">
 	    <DependentUpon>Menu.xaml</DependentUpon>
 	  </Compile>
@@ -71,6 +74,10 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="DataSummary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AbsoluteFrequency.xaml">
+	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LinearCorrelation.xaml">

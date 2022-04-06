@@ -10,6 +10,12 @@ public partial class Menu : ContentPage
 		InitializeComponent();
 	}
 
+	private void AbsoluteFrequencyButtonClicked(object sender, EventArgs e)
+    {
+		AbsoluteFrequency newPage = new AbsoluteFrequency();
+		(App.Current.MainPage as NavigationPage).PushAsync(newPage);
+	}
+
 	private void RelativeFrequencyButtonClicked(object sender, EventArgs e)
 	{
 		//FrequencyCalculator.GetRelativeFrequencies();

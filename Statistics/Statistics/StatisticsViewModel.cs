@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using ExelReader;
+using System.Collections.ObjectModel;
 
 namespace Statistics
 {
@@ -12,8 +13,22 @@ namespace Statistics
         private static decimal standardDeviation = -1;
         private static long swing = -1;
 
-        public Dictionary<int, int> AbsoluteFrequency { get; set; }
-       
+        public static String PathToLogs { get; set; }
+
+        public static String PathToResults { get; set; }
+
+        public static String PathToStudentResults { get; set; }
+
+        public ObservableCollection<int> AbsoluteFrequencyUserIds { get; set; }
+
+        public ObservableCollection<int> AbsoluteFrequencyWikis { get; set; }
+
+        public Dictionary<int,int> AbsoluteFrequencies { get; set; }
+
+        public ObservableCollection<int> RelativeFrequencyUserIds { get; set; }
+
+        public ObservableCollection<decimal> RelativeFrequencyWikis { get; set; }
+
         public Dictionary<int, decimal> RelativeFrequency { get; set; }
 
         public ObservableCollection<double> Mode { get; set; }
@@ -50,18 +65,23 @@ namespace Statistics
 
         public static List<int> WikisCount { get; set; }
 
-        public StatisticsViewModel(string pathToLogs, string pathToResults, string pathToStudentResults)
+        public StatisticsViewModel()
         {
-            exelReader.ReadLogs(pathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
+            exelReader.ReadLogs(PathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
             exelReader.GetUserIdCount(exelReader.updatedWikis, exelReader.updatedWikisPerId);
-            exelReader.ReadScores(pathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
-            exelReader.ReadScores(pathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
+            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
+            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
-            //AbsoluteFrequency = FrequencyCalculator.GetAbsoluteFrequencies(wikisCount);
-            //RelativeFrequency = FrequencyCalculator.GetRelativeFrequencies(wikisCount);
+            AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(WikisCount);
+            Dictionary<int, decimal> relativeFrequency = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
 
-            //Mode = StatisticsCalculator.GetMode(wikisCount);
+            AbsoluteFrequencyUserIds = new ObservableCollection<int>(AbsoluteFrequencies.Select(pair => pair.Key).ToList());
+            RelativeFrequencyUserIds = new ObservableCollection<int>(relativeFrequency.Select(pair => pair.Key).ToList());
+
+            AbsoluteFrequencyWikis = new ObservableCollection<int>(AbsoluteFrequencies.Select(pair => pair.Value).ToList());
+            RelativeFrequencyWikis = new ObservableCollection<decimal>(relativeFrequency.Select(pair => pair.Value).ToList());
+
         }
     }
 }

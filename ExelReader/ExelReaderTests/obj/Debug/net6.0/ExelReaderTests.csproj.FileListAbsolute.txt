@@ -210,15 +210,15 @@ D:\PTS\ExelReader\ExelReaderTests\obj\Debug\net6.0\ExelReaderTests.csproj.CopyCo
 D:\PTS\ExelReader\ExelReaderTests\obj\Debug\net6.0\ExelReaderTests.genruntimeconfig.cache
 D:\PTS\ExelReader\ExelReaderTests\obj\Debug\net6.0\ref\ExelReaderTests.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testhost.exe
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testhost.dll
+C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testhost.exe
+C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\NUnit3.TestAdapter.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\NUnit3.TestAdapter.pdb
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.api.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.core.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testcentric.engine.metadata.dll
-C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReaderTests.deps.json
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReaderTests.runtimeconfig.json
 C:\Users\dimitar\Documents\programming\git2\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReaderTests.dll

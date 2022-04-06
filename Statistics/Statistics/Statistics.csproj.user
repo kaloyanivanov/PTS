@@ -5,7 +5,7 @@
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <SelectedDevice>pixel_5_-_api_30</SelectedDevice>
+    <SelectedDevice>Android Emulator</SelectedDevice>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
@@ -13,6 +13,9 @@
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="DataSummary.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="AbsoluteFrequency.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="LinearCorrelation.xaml">

@@ -9,6 +9,12 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Statistics
 build_property.ProjectDir = C:\Users\dimitar\Documents\programming\git2\PTS\Statistics\Statistics\
 
+[C:/Users/dimitar/Documents/programming/git2/PTS/Statistics/Statistics/AbsoluteFrequency.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Statistics.AbsoluteFrequency.xaml
+build_metadata.AdditionalFiles.TargetPath = AbsoluteFrequency.xaml
+build_metadata.AdditionalFiles.RelativePath = AbsoluteFrequency.xaml
+
 [C:/Users/dimitar/Documents/programming/git2/PTS/Statistics/Statistics/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Statistics.App.xaml

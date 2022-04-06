@@ -16,7 +16,10 @@ public partial class MainPage : ContentPage
 
 		try
         {
-			StatisticsViewModel statisticsViewModel = new StatisticsViewModel(LogsEditor.Text, ResultsEditor.Text, StudentResultsEditor.Text);
+			StatisticsViewModel.PathToLogs = LogsEditor.Text;
+			StatisticsViewModel.PathToResults = ResultsEditor.Text;
+			StatisticsViewModel.PathToStudentResults = StudentResultsEditor.Text;
+			StatisticsViewModel statisticsViewModel = new StatisticsViewModel();
 			Menu newPage = new Menu();
 			(App.Current.MainPage as NavigationPage).PushAsync(newPage);
 		} 
