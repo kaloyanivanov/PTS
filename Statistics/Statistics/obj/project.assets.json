@@ -37475,11 +37475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+      "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
       "projectName": "Statistics",
-      "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+      "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
       "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\Statistics\\Statistics\\obj\\",
+      "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -37505,32 +37505,32 @@
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
           "projectReferences": {
-            "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+            "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
             }
           }
         },
         "net6.0-ios15.2": {
           "targetAlias": "net6.0-ios",
           "projectReferences": {
-            "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+            "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
             }
           }
         },
         "net6.0-maccatalyst15.2": {
           "targetAlias": "net6.0-maccatalyst",
           "projectReferences": {
-            "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+            "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
             }
           }
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041",
           "projectReferences": {
-            "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+            "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+              "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
             }
           }
         }

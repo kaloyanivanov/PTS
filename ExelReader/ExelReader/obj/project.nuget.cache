@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UTCSQ3fs4nt0gzehIInCFIlZKpQkJpkf1B0ABWMInKPJnMWhlnjHKIyrEDJVksE/nq3RCE/cicpxHDWqvfw/rQ==",
+  "dgSpecHash": "0NWMqlXrj910iS78k09wA/yKK8JAmgUwbxH9Hr+PZRX1s3Xs5To2yesKt2ujZlw9ChGFO8OLqjPm2329jncFBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git2\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimitar\\.nuget\\packages\\documentformat.openxml\\2.15.0\\documentformat.openxml.2.15.0.nupkg.sha512",
     "C:\\Users\\dimitar\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"

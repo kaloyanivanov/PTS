@@ -33,6 +33,7 @@
                 Grid.Row="4"
                 Grid.RowSpan="1"
                 Margin="5"
+                Clicked="ModeButtonClicked"
                 HorizontalOptions="Center" />
 
                 <Button 

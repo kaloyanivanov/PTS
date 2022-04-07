@@ -19,17 +19,9 @@ namespace Statistics
 
         public static String PathToStudentResults { get; set; }
 
-        public ObservableCollection<int> AbsoluteFrequencyUserIds { get; set; }
-
-        public ObservableCollection<int> AbsoluteFrequencyWikis { get; set; }
-
         public Dictionary<int,int> AbsoluteFrequencies { get; set; }
 
-        public ObservableCollection<int> RelativeFrequencyUserIds { get; set; }
-
-        public ObservableCollection<decimal> RelativeFrequencyWikis { get; set; }
-
-        public Dictionary<int, decimal> RelativeFrequency { get; set; }
+        public Dictionary<int, decimal> RelativeFrequencies { get; set; }
 
         public ObservableCollection<double> Mode { get; set; }
         
@@ -74,14 +66,13 @@ namespace Statistics
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
             AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(WikisCount);
-            Dictionary<int, decimal> relativeFrequency = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
-
-            AbsoluteFrequencyUserIds = new ObservableCollection<int>(AbsoluteFrequencies.Select(pair => pair.Key).ToList());
-            RelativeFrequencyUserIds = new ObservableCollection<int>(relativeFrequency.Select(pair => pair.Key).ToList());
-
-            AbsoluteFrequencyWikis = new ObservableCollection<int>(AbsoluteFrequencies.Select(pair => pair.Value).ToList());
-            RelativeFrequencyWikis = new ObservableCollection<decimal>(relativeFrequency.Select(pair => pair.Value).ToList());
-
+            RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
+            Median = StatisticsCalculator.GetMedian(WikisCount);
+            Mode = StatisticsCalculator.GetMode(WikisCount);
+            Average = StatisticsCalculator.GetAverage(WikisCount);
+            Dispersion = DistractionCalculator.GetDispersion(WikisCount);
+            StandardDeviation = DistractionCalculator.GetStandardDeviation(WikisCount);
+            Swing = DistractionCalculator.GetSwing(WikisCount);
         }
     }
 }

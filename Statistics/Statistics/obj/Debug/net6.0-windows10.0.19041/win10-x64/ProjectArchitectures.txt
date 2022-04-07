@@ -1,1 +1,1 @@
-C:\Users\dimitar\Documents\programming\git2\PTS\Statistics\Statistics\Statistics.csproj;neutral
+C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\Statistics.csproj;neutral
