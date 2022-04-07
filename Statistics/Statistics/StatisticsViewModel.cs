@@ -24,6 +24,8 @@ namespace Statistics
         public Dictionary<int, decimal> RelativeFrequencies { get; set; }
 
         public ObservableCollection<double> Mode { get; set; }
+
+        public static ObservableCollection<StudentCorrelationViewModel> CorrelationPerStudent { get; set; }
         
         public static Decimal Median
         {
@@ -57,14 +59,19 @@ namespace Statistics
 
         public static List<int> WikisCount { get; set; }
 
+        public static List<int> FilesCount { get; set; }
+
         public StatisticsViewModel()
         {
             exelReader.ReadLogs(PathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
-            exelReader.GetUserIdCount(exelReader.updatedWikis, exelReader.updatedWikisPerId);
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
+            exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
+            exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
+            //exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
+            //exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
+            FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
+           
             AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(WikisCount);
             RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
             Median = StatisticsCalculator.GetMedian(WikisCount);
@@ -73,6 +80,20 @@ namespace Statistics
             Dispersion = DistractionCalculator.GetDispersion(WikisCount);
             StandardDeviation = DistractionCalculator.GetStandardDeviation(WikisCount);
             Swing = DistractionCalculator.GetSwing(WikisCount);
+
+            CorrelationPerStudent = new ObservableCollection<StudentCorrelationViewModel>(exelReader.updatedWikisPerId.Select(wiki =>
+            {
+                int userId = wiki.Key;
+                int wikiCount = wiki.Value;
+                int fileCount = 0;
+
+                if (exelReader.uploadedFilesPerId.ContainsKey(userId))
+                {
+                    fileCount = exelReader.uploadedFilesPerId[userId];
+                }
+
+                return new StudentCorrelationViewModel(userId, wikiCount, fileCount);
+            }).ToList());
         }
     }
 }

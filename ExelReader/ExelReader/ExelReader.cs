@@ -10,8 +10,9 @@ namespace ExelReader
         public List<string> updatedWikis { get; private set; }
         public List<string> uploadedFiles { get; private set; }
         public Dictionary<int, double> scores { get; private set; }
-        public List<KeyValuePair<int, int>> updatedWikisPerId { get; private set; }
-        public List<KeyValuePair<int, int>> uploadedFilesPerId { get; private set; }
+
+        public Dictionary<int, int> updatedWikisPerId { get; set; }
+        public Dictionary<int, int> uploadedFilesPerId { get; set; }
 
         public ExelReader()
         {
@@ -19,8 +20,8 @@ namespace ExelReader
             updatedWikis = new List<string>();
             uploadedFiles = new List<string>();
             scores = new Dictionary<int, double>();
-            updatedWikisPerId = new List<KeyValuePair<int, int>>();
-            uploadedFilesPerId = new List<KeyValuePair<int, int>>();
+            updatedWikisPerId = new Dictionary<int, int>();
+            uploadedFilesPerId = new Dictionary<int, int>();
         }
 
         private void ExtractSheetsData(string path)
@@ -69,11 +70,11 @@ namespace ExelReader
         {
             for (int i = 1; i < sheetData.Elements<Row>().Count(); i++)
             {
-                Row thecurrentrow = sheetData.Elements<Row>().ElementAt(i);
-                if (thecurrentrow.Elements<Cell>().Count() == 2)
+                Row currentRow = sheetData.Elements<Row>().ElementAt(i);
+                if (currentRow.Elements<Cell>().Count() == 2)
                 {
-                    Cell id = thecurrentrow.Elements<Cell>().ElementAt(0);
-                    Cell score = thecurrentrow.Elements<Cell>().ElementAt(1);
+                    Cell id = currentRow.Elements<Cell>().ElementAt(0);
+                    Cell score = currentRow.Elements<Cell>().ElementAt(1);
                     if (AreScoresValid(id) && AreScoresValid(score))
                     {
                         int idValue;
@@ -106,16 +107,15 @@ namespace ExelReader
                 {
                     return false;
                 }
-                return true;
             }
             return true;
         }
 
         private void ExtractLogsSheetData(SheetData sheetData)
         {
-            foreach (Row thecurrentrow in sheetData.Elements<Row>())
+            foreach (Row currentRow in sheetData.Elements<Row>())
             {
-                Cell currentCell = thecurrentrow.Elements<Cell>().ElementAt(3);
+                Cell currentCell = currentRow.Elements<Cell>().ElementAt(3);
                 if (currentCell.DataType != null)
                 {
                     if (currentCell.DataType == CellValues.SharedString)
@@ -123,13 +123,13 @@ namespace ExelReader
                         string temp = ReadString(currentCell);
                         if (temp == "Wiki page updated")
                         {
-                            Cell updatedWiki = thecurrentrow.Elements<Cell>().ElementAt(4);
+                            Cell updatedWiki = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(updatedWiki);
                             updatedWikis.Add(content);
                         }
                         if (temp == "A file has been uploaded.")
                         {
-                            Cell uploadedFile = thecurrentrow.Elements<Cell>().ElementAt(4);
+                            Cell uploadedFile = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(uploadedFile);
                             uploadedFiles.Add(content);
                         }
@@ -141,11 +141,11 @@ namespace ExelReader
                 }
             }
         }
-        private string ReadString(Cell thecurrentcell)
+        private string ReadString(Cell currentCell)
         {
             string currentcellvalue;
             int id;
-            if (Int32.TryParse(thecurrentcell.InnerText, out id))
+            if (Int32.TryParse(currentCell.InnerText, out id))
             {
                 SharedStringItem item = table.Elements<SharedStringItem>().ElementAt(id);
                 if (item.Text != null)
@@ -175,16 +175,14 @@ namespace ExelReader
                 }
             }
         }
-        public void GetUserIdCount(List<string> itemToRead, List<KeyValuePair<int, int>> userIdCount)
+        public Dictionary<int, int> GetUserIdCount(List<string> itemToRead)
         {
             List<int> userIds = new List<int>();
             GetUserId(itemToRead, userIds);
-            var group = userIds.GroupBy(i => i);
-            foreach (var line in group)
-            {
-                userIdCount.Add(new KeyValuePair<int, int>(line.Key, line.Count()));
-                userIdCount.Sort((x, y) => y.Value.CompareTo(x.Value));
-            }
+            return userIds
+                .GroupBy(i => i)
+                .Select(x => new KeyValuePair<int,int>(x.Key, x.Count()))
+                .ToDictionary(x => x.Key, x => x.Value);
         }
     }
 }

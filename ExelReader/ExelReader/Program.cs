@@ -10,11 +10,11 @@ namespace ExelReader
             ExelReader reader = new ExelReader();
             reader.ReadLogs("C:\\Users\\dimitar\\Documents\\programming\\pts\\Logs_Course A_StudentsActivities.xlsx");
 
-            reader.GetUserIdCount(reader.updatedWikis, reader.updatedWikisPerId);
+            reader.updatedWikisPerId = reader.GetUserIdCount(reader.updatedWikis);
 
             Console.WriteLine("_____________________________________________");
 
-            reader.GetUserIdCount(reader.uploadedFiles, reader.uploadedFilesPerId);
+            reader.uploadedFilesPerId = reader.GetUserIdCount(reader.uploadedFiles);
 
             Console.WriteLine("_____________________________________________");
             Console.WriteLine("StudentsResults_Year 1");
@@ -35,6 +35,8 @@ namespace ExelReader
             {
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
+
+            Console.WriteLine();
         }
     }
 }

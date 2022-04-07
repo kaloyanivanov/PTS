@@ -74,12 +74,10 @@ public partial class Menu : ContentPage
 	{
 		return value == -1;
 	}
-
 	private bool IsNotCalculated(double value)
 	{
 		return value == -1;
 	}
-
 	private bool IsNotCalculated(long value)
 	{
 		return value == -1;
