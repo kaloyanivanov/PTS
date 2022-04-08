@@ -5,13 +5,9 @@ namespace Statistics
 {
     public class StatisticsViewModel
     {
-        private ExelReader.ExelReader exelReader = new ExelReader.ExelReader();
-        
-        private static decimal median = -1;
-        private static double average = -1;
-        private static double dispersion = -1;
-        private static decimal standardDeviation = -1;
-        private static long swing = -1;
+        private static ExelReader.ExelReader exelReader = new ExelReader.ExelReader();
+
+        public const int NOT_INITIALIZED = Int32.MinValue;
 
         public static String PathToLogs { get; set; }
 
@@ -19,43 +15,25 @@ namespace Statistics
 
         public static String PathToStudentResults { get; set; }
 
-        public Dictionary<int,int> AbsoluteFrequencies { get; set; }
+        public Dictionary<int, int> AbsoluteFrequencies { get; set; }
 
         public Dictionary<int, decimal> RelativeFrequencies { get; set; }
 
         public ObservableCollection<double> Mode { get; set; }
 
-        public static ObservableCollection<StudentCorrelationViewModel> CorrelationPerStudent { get; set; }
+        public ObservableCollection<StudentSummaryViewModel> StudentsSummary { get; set; }
         
-        public static Decimal Median
-        {
-            get { return median;} 
-            set { median = value; }
-        }
+        public static Decimal Median { get; set; }
 
-        public static Double Average
-        {
-            get { return average; }
-            set { average = value; }
-        }
+        public static Double Average { get; set; }
 
-        public static double Dispersion
-        {
-            get { return dispersion; }
-            set { dispersion = value; }
-        }
+        public static double Dispersion { get; set; }
 
-        public static decimal StandardDeviation
-        {
-            get { return standardDeviation; }
-            set { standardDeviation = value; }
-        }
+        public static decimal StandardDeviation { get; set; }
 
-        public static long Swing
-        {
-            get { return swing; }
-            set { swing = value; }
-        }
+        public static long Swing { get; set; }
+
+        public static double Correlation { get; set; }
 
         public static List<int> WikisCount { get; set; }
 
@@ -66,34 +44,80 @@ namespace Statistics
             exelReader.ReadLogs(PathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
             exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
             exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
-            //exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
-            //exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
+            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
+            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
             FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
-           
+
             AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(WikisCount);
             RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
-            Median = StatisticsCalculator.GetMedian(WikisCount);
             Mode = StatisticsCalculator.GetMode(WikisCount);
-            Average = StatisticsCalculator.GetAverage(WikisCount);
-            Dispersion = DistractionCalculator.GetDispersion(WikisCount);
-            StandardDeviation = DistractionCalculator.GetStandardDeviation(WikisCount);
-            Swing = DistractionCalculator.GetSwing(WikisCount);
-
-            CorrelationPerStudent = new ObservableCollection<StudentCorrelationViewModel>(exelReader.updatedWikisPerId.Select(wiki =>
+            StudentsSummary = new ObservableCollection<StudentSummaryViewModel>(exelReader.uploadedFilesPerId.Select(file =>
             {
-                int userId = wiki.Key;
-                int wikiCount = wiki.Value;
-                int fileCount = 0;
+                int userId = file.Key;
+                int wikiCount = 0;
+                int fileCount = file.Value;
+                double score = 0;
 
-                if (exelReader.uploadedFilesPerId.ContainsKey(userId))
+                if (exelReader.updatedWikisPerId.ContainsKey(userId))
                 {
-                    fileCount = exelReader.uploadedFilesPerId[userId];
+                    wikiCount = exelReader.updatedWikisPerId[userId];
+                }
+                if (exelReader.scores.ContainsKey(userId))
+                {
+                    score = exelReader.scores[userId];
                 }
 
-                return new StudentCorrelationViewModel(userId, wikiCount, fileCount);
+                return new StudentSummaryViewModel(userId, wikiCount, fileCount, score);
             }).ToList());
+        }
+
+        public static void LoadMedian()
+        {
+            Median = StatisticsCalculator.GetMedian(WikisCount);
+        }
+
+        public static void LoadAverage()
+        {
+            Average = StatisticsCalculator.GetAverage(WikisCount);
+        }
+
+        public static void LoadDispersion()
+        {
+            Dispersion = DistractionCalculator.GetDispersion(WikisCount);
+        }
+
+        public static void LoadStandardDeviation()
+        {
+            StandardDeviation = DistractionCalculator.GetStandardDeviation(WikisCount);
+        }
+
+        public static void LoadSwing()
+        {
+            Swing = DistractionCalculator.GetSwing(WikisCount);
+        }
+
+        public static void LoadCorrelation()
+        {
+            exelReader.FillMissingUserIds();
+            WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
+            FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
+
+            Correlation = CorrelationCalculator.ComputeCoeff(WikisCount, FilesCount);
+
+            exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
+            exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
+        }
+
+        public static void ClearAll()
+        {
+            Median = NOT_INITIALIZED;
+            Average = NOT_INITIALIZED;
+            Dispersion = NOT_INITIALIZED;
+            StandardDeviation = NOT_INITIALIZED;
+            Swing = NOT_INITIALIZED;
+            Correlation = NOT_INITIALIZED;
         }
     }
 }

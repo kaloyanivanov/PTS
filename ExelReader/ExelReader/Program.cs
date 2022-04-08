@@ -8,6 +8,7 @@ namespace ExelReader
         {
             Console.OutputEncoding = Encoding.UTF8;
             ExelReader reader = new ExelReader();
+
             reader.ReadLogs("C:\\Users\\dimitar\\Documents\\programming\\pts\\Logs_Course A_StudentsActivities.xlsx");
 
             reader.updatedWikisPerId = reader.GetUserIdCount(reader.updatedWikis);
@@ -35,8 +36,6 @@ namespace ExelReader
             {
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
-
-            Console.WriteLine();
         }
     }
 }

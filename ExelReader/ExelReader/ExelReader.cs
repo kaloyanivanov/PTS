@@ -184,5 +184,24 @@ namespace ExelReader
                 .Select(x => new KeyValuePair<int,int>(x.Key, x.Count()))
                 .ToDictionary(x => x.Key, x => x.Value);
         }
+
+        public void FillMissingUserIds()
+        {
+            foreach (int userId in uploadedFilesPerId.Keys)
+            {
+                if (!updatedWikisPerId.ContainsKey(userId))
+                {
+                    updatedWikisPerId.Add(userId, 0);
+                }
+            }
+
+            foreach (int userId in updatedWikisPerId.Keys)
+            {
+                if (!uploadedFilesPerId.ContainsKey(userId))
+                {
+                    uploadedFilesPerId.Add(userId, 0);
+                }
+            }
+        }
     }
 }

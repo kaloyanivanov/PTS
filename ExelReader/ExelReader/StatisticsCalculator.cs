@@ -8,6 +8,12 @@ namespace ExelReader
         {
             int count = numbers.Count;
             decimal median = 0;
+
+            if (count == 0)
+            {
+                return 0;
+            }
+
             if (count % 2 == 0)
             {
                 long a = numbers[count / 2 - 1];
@@ -23,6 +29,11 @@ namespace ExelReader
 
         public static double GetAverage(List<int> numbers)
         {
+            if (numbers.Count == 0)
+            {
+                return 0;
+            }
+
             double average = 0;
             for (int i = 0; i < numbers.Count; i++)
             {
@@ -34,6 +45,11 @@ namespace ExelReader
 
         public static double GetAverageOfDouble(List<double> numbers)
         {
+            if (numbers.Count == 0)
+            {
+                return 0;
+            }
+
             double average = 0;
             for (int i = 0; i < numbers.Count; i++)
             {
