@@ -20,7 +20,7 @@
 
         public override string ToString()
         {
-            return "Id: " + StudentId + ", Wiki: " + Wikis + ", Files: " + Files + ", Score: " + Score;
+            return "Потребител: " + StudentId + ", Редактирани Уикита: " + Wikis + ", Прочетени файлове: " + Files + ", Резултат: " + Score;
         }
     }
 }

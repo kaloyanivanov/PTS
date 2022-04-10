@@ -27,12 +27,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = Statistics.DataSummary.xam
 build_metadata.AdditionalFiles.TargetPath = DataSummary.xaml
 build_metadata.AdditionalFiles.RelativePath = DataSummary.xaml
 
-[C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/LinearCorrelation.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Statistics.LinearCorrelation.xaml
-build_metadata.AdditionalFiles.TargetPath = LinearCorrelation.xaml
-build_metadata.AdditionalFiles.RelativePath = LinearCorrelation.xaml
-
 [C:/Users/dimitar/Documents/programming/git/PTS/Statistics/Statistics/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Statistics.MainPage.xaml
