@@ -23,9 +23,18 @@ public partial class MainPage : ContentPage
 			Menu newPage = new Menu();
 			(App.Current.MainPage as NavigationPage).PushAsync(newPage);
 		} 
-		catch (IOException ex)
+		catch (Exception ex)
         {
-			InvalidPathLabel.IsVisible = true;
+
+			if (ex is IOException || ex is ArgumentNullException)
+            {
+				InvalidPathLabel.IsVisible = true;
+			}
+			else
+            {
+				InvalidPathLabel.Text = "Невалидни данни";
+				InvalidPathLabel.IsVisible = true;
+			}
 		}
 	}
 }

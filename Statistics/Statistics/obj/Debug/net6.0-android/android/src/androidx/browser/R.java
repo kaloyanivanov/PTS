@@ -58,18 +58,18 @@ public final class R {
 		public static final int notification_top_pad_large_text = 0x7f060194;
 	}
 	public static final class drawable {
-		public static final int notification_action_background = 0x7f070081;
-		public static final int notification_bg = 0x7f070082;
-		public static final int notification_bg_low = 0x7f070083;
-		public static final int notification_bg_low_normal = 0x7f070084;
-		public static final int notification_bg_low_pressed = 0x7f070085;
-		public static final int notification_bg_normal = 0x7f070086;
-		public static final int notification_bg_normal_pressed = 0x7f070087;
-		public static final int notification_icon_background = 0x7f070088;
-		public static final int notification_template_icon_bg = 0x7f070089;
-		public static final int notification_template_icon_low_bg = 0x7f07008a;
-		public static final int notification_tile_bg = 0x7f07008b;
-		public static final int notify_panel_notification_icon_bg = 0x7f07008c;
+		public static final int notification_action_background = 0x7f070083;
+		public static final int notification_bg = 0x7f070084;
+		public static final int notification_bg_low = 0x7f070085;
+		public static final int notification_bg_low_normal = 0x7f070086;
+		public static final int notification_bg_low_pressed = 0x7f070087;
+		public static final int notification_bg_normal = 0x7f070088;
+		public static final int notification_bg_normal_pressed = 0x7f070089;
+		public static final int notification_icon_background = 0x7f07008a;
+		public static final int notification_template_icon_bg = 0x7f07008b;
+		public static final int notification_template_icon_low_bg = 0x7f07008c;
+		public static final int notification_tile_bg = 0x7f07008d;
+		public static final int notify_panel_notification_icon_bg = 0x7f07008e;
 	}
 	public static final class id {
 		public static final int accessibility_action_clickable_span = 0x7f08000f;
@@ -160,20 +160,20 @@ public final class R {
 		public static final int notification_template_part_time = 0x7f0b006d;
 	}
 	public static final class string {
-		public static final int copy_toast_msg = 0x7f0d0023;
-		public static final int fallback_menu_item_copy_link = 0x7f0d0028;
-		public static final int fallback_menu_item_open_in_browser = 0x7f0d0029;
-		public static final int fallback_menu_item_share_link = 0x7f0d002a;
-		public static final int status_bar_notification_info_overflow = 0x7f0d006e;
+		public static final int copy_toast_msg = 0x7f0e0023;
+		public static final int fallback_menu_item_copy_link = 0x7f0e0028;
+		public static final int fallback_menu_item_open_in_browser = 0x7f0e0029;
+		public static final int fallback_menu_item_share_link = 0x7f0e002a;
+		public static final int status_bar_notification_info_overflow = 0x7f0e006e;
 	}
 	public static final class style {
-		public static final int TextAppearance_Compat_Notification = 0x7f0e016a;
-		public static final int TextAppearance_Compat_Notification_Info = 0x7f0e016b;
-		public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0e016d;
-		public static final int TextAppearance_Compat_Notification_Time = 0x7f0e0170;
-		public static final int TextAppearance_Compat_Notification_Title = 0x7f0e0172;
-		public static final int Widget_Compat_NotificationActionContainer = 0x7f0e025a;
-		public static final int Widget_Compat_NotificationActionText = 0x7f0e025b;
+		public static final int TextAppearance_Compat_Notification = 0x7f0f016a;
+		public static final int TextAppearance_Compat_Notification_Info = 0x7f0f016b;
+		public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0f016d;
+		public static final int TextAppearance_Compat_Notification_Time = 0x7f0f0170;
+		public static final int TextAppearance_Compat_Notification_Title = 0x7f0f0172;
+		public static final int Widget_Compat_NotificationActionContainer = 0x7f0f025a;
+		public static final int Widget_Compat_NotificationActionText = 0x7f0f025b;
 	}
 	public static final class styleable {
 		public static final int[] ColorStateListItem = new int[] { 0x010101a5, 0x0101031f, 0x7f03002d };
@@ -216,6 +216,6 @@ public final class R {
 		public static final int GradientColorItem_android_offset = 1;
 	}
 	public static final class xml {
-		public static final int image_share_filepaths = 0x7f100000;
+		public static final int image_share_filepaths = 0x7f110000;
 	}
 }

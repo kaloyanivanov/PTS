@@ -12,13 +12,13 @@
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0",
-          "coverlet.collector": "3.1.0"
+          "coverlet.collector": "3.1.2"
         },
         "runtime": {
           "ExelReaderTests.dll": {}
         }
       },
-      "coverlet.collector/3.1.0": {},
+      "coverlet.collector/3.1.2": {},
       "DocumentFormat.OpenXml/2.15.0": {
         "dependencies": {
           "System.IO.Packaging": "4.7.0"
@@ -686,12 +686,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "coverlet.collector/3.1.0": {
+    "coverlet.collector/3.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
-      "path": "coverlet.collector/3.1.0",
-      "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
+      "sha512": "sha512-wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
+      "path": "coverlet.collector/3.1.2",
+      "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/2.15.0": {
       "type": "package",

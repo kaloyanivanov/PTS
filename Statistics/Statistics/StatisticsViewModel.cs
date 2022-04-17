@@ -41,11 +41,15 @@ namespace Statistics
 
         public StatisticsViewModel()
         {
-            exelReader.ReadLogs(PathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
+
+            exelReader.ReadLogs(PathToLogs);
             exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
             exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
+            exelReader.ReadScores(PathToResults);
+            if (PathToStudentResults != null)
+            {
+                exelReader.ReadScores(PathToStudentResults);
+            }
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
             FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();

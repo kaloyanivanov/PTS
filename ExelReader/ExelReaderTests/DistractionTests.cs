@@ -16,6 +16,7 @@ namespace ExelReaderTests
         }
 
         [Test]
+
         public void GetDispersion_OneElementList_ThrowsArgumentExeption()
         {
             List<int> testData = new() { 6 };

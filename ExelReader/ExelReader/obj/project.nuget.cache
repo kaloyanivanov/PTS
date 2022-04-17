@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0NWMqlXrj910iS78k09wA/yKK8JAmgUwbxH9Hr+PZRX1s3Xs5To2yesKt2ujZlw9ChGFO8OLqjPm2329jncFBA==",
+  "dgSpecHash": "cf6bpLTbQEyLoC6MAP8r2g/YAA0AZjC0qwPFmdjYI8M55eDNrfAV94moyL2kPiBUsTyWahJv7UVxBqBw0jDicg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+  "projectFilePath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dimitar\\.nuget\\packages\\documentformat.openxml\\2.15.0\\documentformat.openxml.2.15.0.nupkg.sha512",
-    "C:\\Users\\dimitar\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+    "C:\\Users\\Kaloian\\.nuget\\packages\\documentformat.openxml\\2.15.0\\documentformat.openxml.2.15.0.nupkg.sha512",
+    "C:\\Users\\Kaloian\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,4 @@
-namespace Statistics;
+﻿namespace Statistics;
 
 public partial class Menu : ContentPage
 {
@@ -51,20 +51,44 @@ public partial class Menu : ContentPage
 	{
 		if (StatisticsViewModel.Dispersion == StatisticsViewModel.NOT_INITIALIZED)
 		{
-			StatisticsViewModel.LoadDispersion();
+            try
+            {
+				StatisticsViewModel.LoadDispersion();
+			}catch(ArgumentException ex)
+            {
+				ResultLabel.Text = "Изследваното множество трябва да има поне два елемента.";
+				ResultLabel.IsVisible = true;
+
+			}
 		}
-		ResultLabel.Text = StatisticsViewModel.Dispersion.ToString();
-		ResultLabel.IsVisible = true;
+        else
+        {
+			ResultLabel.Text = StatisticsViewModel.Dispersion.ToString();
+			ResultLabel.IsVisible = true;
+		}
+		
 	}
 
 	private void StandardDeviationButtonClicked(object sender, EventArgs e)
 	{
 		if (StatisticsViewModel.StandardDeviation == StatisticsViewModel.NOT_INITIALIZED)
 		{
-			StatisticsViewModel.LoadStandardDeviation();
+			try
+			{
+				StatisticsViewModel.LoadStandardDeviation();
+			}
+			catch (ArgumentException ex)
+			{
+				ResultLabel.Text = "Изследваното множество трябва да има поне два елемента.";
+				ResultLabel.IsVisible = true;
+
+			}
 		}
-		ResultLabel.Text = StatisticsViewModel.StandardDeviation.ToString();
-		ResultLabel.IsVisible = true;
+        else
+        {
+			ResultLabel.Text = StatisticsViewModel.StandardDeviation.ToString();
+			ResultLabel.IsVisible = true;
+		}
 	}
 
 	private void SwingButtonClicked(object sender, EventArgs e)

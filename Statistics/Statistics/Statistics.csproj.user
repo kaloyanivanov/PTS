@@ -5,7 +5,7 @@
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <SelectedDevice>Android Emulator</SelectedDevice>
+    <SelectedDevice>pixel_5_-_api_30</SelectedDevice>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">

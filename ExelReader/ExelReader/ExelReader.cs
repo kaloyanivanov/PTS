@@ -95,6 +95,14 @@ namespace ExelReader
                             throw new Exception("Invalid user id.");
                         }
                     }
+                    else
+                    {
+                        throw new Exception("Invalid data.");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Invalid data.");
                 }
             }
         }
@@ -115,24 +123,29 @@ namespace ExelReader
         {
             foreach (Row currentRow in sheetData.Elements<Row>())
             {
+                if(currentRow.Elements<Cell>().Count()<5) throw new Exception("Invalid Excel logs.");
                 Cell currentCell = currentRow.Elements<Cell>().ElementAt(3);
                 if (currentCell.DataType != null)
                 {
                     if (currentCell.DataType == CellValues.SharedString)
                     {
                         string temp = ReadString(currentCell);
+                        bool flag = false;
                         if (temp == "Wiki page updated")
                         {
                             Cell updatedWiki = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(updatedWiki);
                             updatedWikis.Add(content);
+                            flag = true;
                         }
                         if (temp == "A file has been uploaded.")
                         {
                             Cell uploadedFile = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(uploadedFile);
                             uploadedFiles.Add(content);
+                            flag=true;
                         }
+                        if(flag==false) throw new Exception("Invalid Excel logs.");
                     }
                     else
                     {
