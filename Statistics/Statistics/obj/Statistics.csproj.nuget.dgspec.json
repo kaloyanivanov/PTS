@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj": {}
+    "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+    "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "projectUniqueName": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
         "projectName": "ExelReader",
-        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
-        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\obj\\",
+        "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj",
+        "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
+        "outputPath": "D:\\PTS\\ExelReader\\ExelReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VisualStudioSDK\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,21 +69,21 @@
         }
       }
     },
-    "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj": {
+    "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+        "projectUniqueName": "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj",
         "projectName": "Statistics",
-        "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\Statistics.csproj",
-        "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\Statistics\\Statistics\\obj\\",
+        "projectPath": "D:\\PTS\\Statistics\\Statistics\\Statistics.csproj",
+        "packagesPath": "C:\\Users\\Kaloian\\.nuget\\packages\\",
+        "outputPath": "D:\\PTS\\Statistics\\Statistics\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VisualStudioSDK\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kaloian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,32 +102,32 @@
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
             "projectReferences": {
-              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
               }
             }
           },
           "net6.0-ios15.2": {
             "targetAlias": "net6.0-ios",
             "projectReferences": {
-              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
               }
             }
           },
           "net6.0-maccatalyst15.2": {
             "targetAlias": "net6.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
               }
             }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041",
             "projectReferences": {
-              "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
-                "projectPath": "C:\\Users\\dimitar\\Documents\\programming\\git\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
+              "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj": {
+                "projectPath": "D:\\PTS\\ExelReader\\ExelReader\\ExelReader.csproj"
               }
             }
           }

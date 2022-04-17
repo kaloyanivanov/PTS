@@ -1546,3 +1546,15 @@ C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\obj\Debug\n
 C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\obj\Debug\net6.0-windows10.0.19041\win10-x64\qualifiers.txt.intermediate
 C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\obj\Debug\net6.0-windows10.0.19041\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\dimitar\Documents\programming\git\PTS\Statistics\Statistics\obj\Debug\net6.0-windows10.0.19041\win10-x64\ProjectArchitectures.txt
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\DocumentFormat.OpenXml.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\SOS.NETCore.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\System.Runtime.InteropServices.WindowsRuntime.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\System.IO.Packaging.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\clrcompression.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\mscordaccore_amd64_amd64_4.6.28207.03.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\mscorrc.debug.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\sos.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\sos_amd64_amd64_4.6.28207.03.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\apphost.exe
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\ExelReader.dll
+D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\ExelReader.pdb

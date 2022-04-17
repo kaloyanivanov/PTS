@@ -15,9 +15,6 @@ D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.dll
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.api.dll
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\nunit.engine.core.dll
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\testcentric.engine.metadata.dll
-D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.deps.json
-D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.runtimeconfig.json
-D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReader.exe
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReaderTests.deps.json
 D:\PTS\ExelReader\ExelReaderTests\bin\Debug\net6.0\ExelReaderTests.runtimeconfig.json
