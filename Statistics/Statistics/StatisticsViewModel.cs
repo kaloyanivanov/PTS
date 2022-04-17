@@ -1,5 +1,4 @@
 ﻿using ExelReader;
-using System.Collections.ObjectModel;
 
 namespace Statistics
 {
@@ -17,11 +16,11 @@ namespace Statistics
 
         public Dictionary<int, int> AbsoluteFrequencies { get; set; }
 
-        public Dictionary<int, decimal> RelativeFrequencies { get; set; }
+        public Dictionary<int, String> RelativeFrequencies { get; set; }
 
-        public ObservableCollection<double> Mode { get; set; }
+        public List<double> Mode { get; set; }
 
-        public ObservableCollection<StudentSummaryViewModel> StudentsSummary { get; set; }
+        public List<StudentSummaryViewModel> StudentsSummary { get; set; }
         
         public static Decimal Median { get; set; }
 
@@ -41,24 +40,41 @@ namespace Statistics
 
         public StatisticsViewModel()
         {
-            exelReader.ReadLogs(PathToLogs + "\\Logs_Course A_StudentsActivities.xlsx");
+            exelReader.ReadLogs(PathToLogs);
             exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
             exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 1.xlsx");
-            exelReader.ReadScores(PathToStudentResults + "\\Course A_StudentsResults_Year 2.xlsx");
+            exelReader.ReadScores(PathToResults);
+            if (PathToStudentResults != null)
+            {
+                exelReader.ReadScores(PathToStudentResults);
+            }
 
             WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
             FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
-
-            AbsoluteFrequencies = FrequencyCalculator.GetAbsoluteFrequencies(WikisCount);
-            RelativeFrequencies = FrequencyCalculator.GetRelativeFrequencies(WikisCount);
+          
+            FrequencyCalculator calculator = new FrequencyCalculator();
+            AbsoluteFrequencies = calculator.GetAbsoluteFrequencies(WikisCount)
+                .OrderBy(x=>x.Key)
+                .ToDictionary(x=>x.Key,x=> x.Value);
+            
+            RelativeFrequencies = calculator.GetRelativeFrequencies(WikisCount)
+                .Select(x =>
+                {
+                    String percent = x.Value + "%";
+                    KeyValuePair<int, string> result = new KeyValuePair<int, string>(x.Key, percent);
+                    return result;
+                })
+                .OrderBy(x => x.Key)
+                .ToDictionary(x => x.Key, x => x.Value);
+            
             Mode = StatisticsCalculator.GetMode(WikisCount);
-            StudentsSummary = new ObservableCollection<StudentSummaryViewModel>(exelReader.uploadedFilesPerId.Select(file =>
+            
+            StudentsSummary = new List<StudentSummaryViewModel>(exelReader.uploadedFilesPerId.Select(file =>
             {
                 int userId = file.Key;
                 int wikiCount = 0;
                 int fileCount = file.Value;
-                double score = 0;
+                string score = "Без оценка";
 
                 if (exelReader.updatedWikisPerId.ContainsKey(userId))
                 {
@@ -66,7 +82,7 @@ namespace Statistics
                 }
                 if (exelReader.scores.ContainsKey(userId))
                 {
-                    score = exelReader.scores[userId];
+                    score = exelReader.scores[userId].ToString();
                 }
 
                 return new StudentSummaryViewModel(userId, wikiCount, fileCount, score);

@@ -15,17 +15,26 @@ public partial class MainPage : ContentPage
 		InvalidPathLabel.IsVisible = false;
 
 		try
-        {
+		{
 			StatisticsViewModel.PathToLogs = LogsEditor.Text;
 			StatisticsViewModel.PathToResults = ResultsEditor.Text;
 			StatisticsViewModel.PathToStudentResults = StudentResultsEditor.Text;
 			StatisticsViewModel statisticsViewModel = new StatisticsViewModel();
 			Menu newPage = new Menu();
 			(App.Current.MainPage as NavigationPage).PushAsync(newPage);
-		} 
-		catch (IOException ex)
-        {
-			InvalidPathLabel.IsVisible = true;
+		}
+		catch (Exception ex)
+		{
+
+			if (ex is IOException || ex is ArgumentNullException)
+			{
+				InvalidPathLabel.IsVisible = true;
+			}
+			else
+			{
+				InvalidPathLabel.Text = "Невалидни данни";
+				InvalidPathLabel.IsVisible = true;
+			}
 		}
 	}
 }

@@ -17,6 +17,7 @@ namespace ExelReader
         public ExelReader()
         {
             sheets = new List<SheetData>();
+            table = new SharedStringTable();
             updatedWikis = new List<string>();
             uploadedFiles = new List<string>();
             scores = new Dictionary<int, double>();
@@ -45,7 +46,7 @@ namespace ExelReader
 
         public void ReadLogs(string path)
         {
-            sheets=new List<SheetData>();
+            sheets = new List<SheetData>();
             updatedWikis = new List<string>();
             uploadedFiles = new List<string>();
             ExtractSheetsData(path);
@@ -95,6 +96,14 @@ namespace ExelReader
                             throw new Exception("Invalid user id.");
                         }
                     }
+                    else
+                    {
+                        throw new Exception("Invalid data.");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Invalid data.");
                 }
             }
         }
@@ -115,24 +124,33 @@ namespace ExelReader
         {
             foreach (Row currentRow in sheetData.Elements<Row>())
             {
+                if (currentRow.Elements<Cell>().Count() < 5) throw new Exception("Invalid Excel logs.");
+                if (!currentRow.HasChildren)
+                {
+                    continue;
+                }
                 Cell currentCell = currentRow.Elements<Cell>().ElementAt(3);
                 if (currentCell.DataType != null)
                 {
                     if (currentCell.DataType == CellValues.SharedString)
                     {
                         string temp = ReadString(currentCell);
+                        bool flag = false;
                         if (temp == "Wiki page updated")
                         {
                             Cell updatedWiki = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(updatedWiki);
                             updatedWikis.Add(content);
+                            flag = true;
                         }
                         if (temp == "A file has been uploaded.")
                         {
                             Cell uploadedFile = currentRow.Elements<Cell>().ElementAt(4);
                             string content = ReadString(uploadedFile);
                             uploadedFiles.Add(content);
+                            flag = true;
                         }
+                        if (flag == false) throw new Exception("Invalid Excel logs.");
                     }
                     else
                     {
@@ -181,7 +199,7 @@ namespace ExelReader
             GetUserId(itemToRead, userIds);
             return userIds
                 .GroupBy(i => i)
-                .Select(x => new KeyValuePair<int,int>(x.Key, x.Count()))
+                .Select(x => new KeyValuePair<int, int>(x.Key, x.Count()))
                 .ToDictionary(x => x.Key, x => x.Value);
         }
 
