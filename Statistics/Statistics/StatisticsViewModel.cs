@@ -41,16 +41,16 @@ namespace Statistics
         public StatisticsViewModel()
         {
             exelReader.ReadLogs(PathToLogs);
-            exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
-            exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
+            exelReader.UpdatedWikisPerId = exelReader.GetUserIdCount(exelReader.UpdatedWikis);
+            exelReader.UploadedFilesPerId = exelReader.GetUserIdCount(exelReader.UploadedFiles);
             exelReader.ReadScores(PathToResults);
             if (PathToStudentResults != null)
             {
                 exelReader.ReadScores(PathToStudentResults);
             }
 
-            WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
-            FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
+            WikisCount = exelReader.UpdatedWikisPerId.Select(wiki => wiki.Value).ToList();
+            FilesCount = exelReader.UploadedFilesPerId.Select(file => file.Value).ToList();
           
             FrequencyCalculator calculator = new FrequencyCalculator();
             AbsoluteFrequencies = calculator.GetAbsoluteFrequencies(WikisCount)
@@ -69,20 +69,20 @@ namespace Statistics
             
             Mode = StatisticsCalculator.GetMode(WikisCount);
             
-            StudentsSummary = new List<StudentSummaryViewModel>(exelReader.uploadedFilesPerId.Select(file =>
+            StudentsSummary = new List<StudentSummaryViewModel>(exelReader.UploadedFilesPerId.Select(file =>
             {
                 int userId = file.Key;
                 int wikiCount = 0;
                 int fileCount = file.Value;
                 string score = "Без оценка";
 
-                if (exelReader.updatedWikisPerId.ContainsKey(userId))
+                if (exelReader.UpdatedWikisPerId.ContainsKey(userId))
                 {
-                    wikiCount = exelReader.updatedWikisPerId[userId];
+                    wikiCount = exelReader.UpdatedWikisPerId[userId];
                 }
-                if (exelReader.scores.ContainsKey(userId))
+                if (exelReader.Scores.ContainsKey(userId))
                 {
-                    score = exelReader.scores[userId].ToString();
+                    score = exelReader.Scores[userId].ToString();
                 }
 
                 return new StudentSummaryViewModel(userId, wikiCount, fileCount, score);
@@ -117,13 +117,13 @@ namespace Statistics
         public static void LoadCorrelation()
         {
             exelReader.FillMissingUserIds();
-            WikisCount = exelReader.updatedWikisPerId.Select(wiki => wiki.Value).ToList();
-            FilesCount = exelReader.uploadedFilesPerId.Select(file => file.Value).ToList();
+            WikisCount = exelReader.UpdatedWikisPerId.Select(wiki => wiki.Value).ToList();
+            FilesCount = exelReader.UploadedFilesPerId.Select(file => file.Value).ToList();
 
             Correlation = CorrelationCalculator.ComputeCoeff(WikisCount, FilesCount);
 
-            exelReader.updatedWikisPerId = exelReader.GetUserIdCount(exelReader.updatedWikis);
-            exelReader.uploadedFilesPerId = exelReader.GetUserIdCount(exelReader.uploadedFiles);
+            exelReader.UpdatedWikisPerId = exelReader.GetUserIdCount(exelReader.UpdatedWikis);
+            exelReader.UploadedFilesPerId = exelReader.GetUserIdCount(exelReader.UploadedFiles);
         }
 
         public static void ClearAll()

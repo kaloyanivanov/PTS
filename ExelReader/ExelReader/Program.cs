@@ -11,18 +11,18 @@ namespace ExelReader
 
             reader.ReadLogs("C:\\Users\\dimitar\\Documents\\programming\\pts\\Logs_Course A_StudentsActivities.xlsx");
 
-            reader.updatedWikisPerId = reader.GetUserIdCount(reader.updatedWikis);
+            reader.UpdatedWikisPerId = reader.GetUserIdCount(reader.UpdatedWikis);
 
             Console.WriteLine("_____________________________________________");
 
-            reader.uploadedFilesPerId = reader.GetUserIdCount(reader.uploadedFiles);
+            reader.UploadedFilesPerId = reader.GetUserIdCount(reader.UploadedFiles);
 
             Console.WriteLine("_____________________________________________");
             Console.WriteLine("StudentsResults_Year 1");
 
             reader.ReadScores("C:\\Users\\dimitar\\Documents\\programming\\pts\\Course A_StudentsResults_Year 1.xlsx");
 
-            foreach (KeyValuePair<int, double> entry in reader.scores)
+            foreach (KeyValuePair<int, double> entry in reader.Scores)
             {
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }
@@ -32,7 +32,7 @@ namespace ExelReader
 
             reader.ReadScores("C:\\Users\\dimitar\\Documents\\programming\\pts\\Course A_StudentsResults_Year 2.xlsx");
 
-            foreach (KeyValuePair<int, double> entry in reader.scores)
+            foreach (KeyValuePair<int, double> entry in reader.Scores)
             {
                 Console.WriteLine(entry.Key + " " + entry.Value);
             }

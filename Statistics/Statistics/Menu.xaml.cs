@@ -54,6 +54,8 @@ public partial class Menu : ContentPage
 			try
 			{
 				StatisticsViewModel.LoadDispersion();
+				ResultLabel.Text = StatisticsViewModel.Dispersion.ToString();
+				ResultLabel.IsVisible = true;
 			}
 			catch (ArgumentException ex)
 			{
@@ -61,11 +63,6 @@ public partial class Menu : ContentPage
 				ResultLabel.IsVisible = true;
 
 			}
-		}
-		else
-		{
-			ResultLabel.Text = StatisticsViewModel.Dispersion.ToString();
-			ResultLabel.IsVisible = true;
 		}
 
 	}
@@ -77,6 +74,8 @@ public partial class Menu : ContentPage
 			try
 			{
 				StatisticsViewModel.LoadStandardDeviation();
+				ResultLabel.Text = StatisticsViewModel.StandardDeviation.ToString();
+				ResultLabel.IsVisible = true;
 			}
 			catch (ArgumentException ex)
 			{
@@ -85,11 +84,7 @@ public partial class Menu : ContentPage
 
 			}
 		}
-		else
-		{
-			ResultLabel.Text = StatisticsViewModel.StandardDeviation.ToString();
-			ResultLabel.IsVisible = true;
-		}
+
 	}
 
 	private void SwingButtonClicked(object sender, EventArgs e)
