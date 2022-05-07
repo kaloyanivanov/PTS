@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-19T08:28:32.439</Modified>
+      <Modified>2022-04-19T08:54:53.179</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-19T08:28:31.995</Modified>
+      <Modified>2022-04-19T08:54:52.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PTS\Statistics\Statistics\bin\Debug\net6.0-windows10.0.19041\win10-x64\Statistics.runtimeconfig.json">
       <PackagePath>Statistics.runtimeconfig.json</PackagePath>
@@ -1096,7 +1096,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PTS\Statistics\Statistics\obj\Debug\net6.0-windows10.0.19041\win10-x64\Platforms\Windows\App.xbf">
       <PackagePath>Platforms\Windows\App.xbf</PackagePath>
-      <Modified>2022-04-19T08:28:31.342</Modified>
+      <Modified>2022-04-19T08:54:52.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PTS\Statistics\Statistics\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
